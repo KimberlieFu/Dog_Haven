@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+</head>
+
+<body>
+  <!-- importing the Java Script file -->
+  <script src="script.js"></script>
+
+  <!--   creating the Nav bar  -->
+  <ul>
+    <li><a class="logo" href="index.html"><img class="logo" src="logo_outline2.png" alt="Logo"
+          style=height:54.4px;width:54.4px align=middle></a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Carers.html">Our Team</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="AboutUs.html">About Us</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+    <li><a href="Contact-Us.html">Contact Us</a></li>
+    <li><a href="Login.html">Login/Register</a></li>
+    <li style="float:right"><a class="BookNow" href="Booking.html"><strong>Book Now!</strong></a></li>
+  </ul>
+
+  <br>
+  <div class="title">
+    <img style="width: 500px;" class="bookingtitle" src="newbooking.png">
+  </div>
+  <br>
+
+  <div class="container">
+    <!-- forms -->
+    <div align="center" class="form">
+      <!-- register -->
+      <div class="booking-form">
+        <label for="name field"> Dog Name: </label>
+        <input style="font-size: 20px; " type="text" class="name field" placeholder="Enter your dog's name">
+        <label for="breed field"> Dog Breed: </label>
+        <input style="font-size: 20px;" type="text" class="breed field" placeholder="Golden Retriever" required>
+        <label for="message"> Special Requirements (Optional): </label>
+        <textarea style="font-size: 15px;" id="message" rows="8" cols="50"
+          placeholder="e.g. allergies, socialisation issues, health conditions, etc."></textarea>
+        <label for="date field"> Date: </label>
+        <p style="font-size: 13px">from:</p>
+        <input style="font-size: 20px;" type="datetime-local" class="date field">
+        <p style="font-size: 13px">to:</p>
+        <input style="font-size: 20px;" type="datetime-local" class="date field"><br>
+        <fieldset>
+          <legend>Do you have any additional desired services?</legend>
+          <div>
+            <input style="font-size: 20px;" type="checkbox" id="lang1" name="lang1" value="Java">
+            <label style="font-weight: normal; padding: 0px; display:inline;" for="lang1">Grooming</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lang2" name="lang2" value="Python">
+            <label style="font-weight: normal; padding: 0px; display:inline;" for="lang2"> Dog Pool</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lang3" name="lang3" value="Go">
+            <label style="font-weight: normal; padding: 0 0px; display:inline;" for="lang3">Dog Training</label>
+          </div>
+          <div>
+            <input type="checkbox" id="lang4" name="lang4" value="Rust">
+            <label style="font-weight: normal; padding: 0px; display:inline;" for="lang4">Dog Gym</label>
+          </div>
+          </legend>
+        </fieldset>
+        <!-- <td>
+          Desired Services:
+        </td>
+        <input type="checkbox" name="grooming">
+        <label for="grooming"> Grooming </label>
+        <input type="checkbox" name="pool">
+        <label for="pool"> Dog Pool </label>
+        <input type="checkbox" name="training">
+        <label for="training"> Dog Training </label>
+        <input type="checkbox" name="gym">
+        <label for="gym"> Dog Gym </label><br> -->
+        <p>&nbsp</p>
+        <a href='Payment.html'>
+          <button class="bookbtn">Book Now!</button>
+        </a>
+        <p>&nbsp</p>
+      </div>
+    </div>
+  </div>
+  <p>&nbsp</p>
+  <p>&nbsp</p>
+  <p>&nbsp</p>
+  <p>&nbsp</p>
+
+
+  <!-- Chat bot -->
+  <!-- button display -->
+  <!-- https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+  <button class="open-button material-icons chatBotButton" onclick="openForm()" style="font-size: 40px">forum </button>
+
+  <!-- The form -->
+  <div class="form-popup" id="myForm">
+    <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+    <h2 class="chatbot-heading">Ask ChatBot</h2>
+    <p id="chatbotText">What would you like to know?</p>
+
+    <form action="/Booking.html" class="form-container">
+      <input type="text" placeholder="Ask a Question" name="question" required>
+    </form>
+  </div>
+
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="footer-container">
+      <nav class="footer-nav">
+        <ul style="background-color: #74b898;">
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Carers.html">Our Team</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact-Us.html">Contact Us</a></li>
+          <li><a href="Booking.html">Booking</a></li>
+          <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+          <li><a href="Sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p style="text-align: left;">&copy; 2023 Dogs Haven. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

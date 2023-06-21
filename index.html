@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+</head>
+
+<body>
+  <!-- importing the Java Script file -->
+  <script src="script.js"></script>
+
+  <!--   creating the Nav bar  -->
+  <ul>
+    <li><a class="index-logo" href="index.html"><img class="index-logo" src="logo_outline2.png" alt="Logo"
+          style=height:54.4px;width:54.4px align=middle></a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Carers.html">Our Team</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="AboutUs.html">About Us</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+    <li><a href="Contact-Us.html">Contact Us</a></li>
+    <li><a href="Login.html">Login/Register</a></li>
+    <li style="float:right"><a class="BookNow" href="Login.html"><strong>Book Now!</strong></a></li>
+  </ul>
+
+  <!-- webpage heading -->
+  <div class="website-title">
+    <img class="dogshaven" src="title.png">
+
+
+    <article class="home-container">
+      <div class="circle"></div>
+      <div class="home-content">
+        <div class="home-textbox">
+          <h2>Your dog's home away from home!</h2>
+          <p>
+            Caring for a dog involves providing proper nutrition, regular exercise, grooming, veterinary care, and
+            social interaction. Dogs thrive on human companionship and form strong bonds with their owners and families.
+            They are known for their loyalty, affection, and unwavering devotion.
+          </p>
+          <a href="AboutUs.html">
+            Learn More
+          </a>
+        </div>
+
+
+
+        <div class="home-img">
+          <img src="home_page/dog-carer.jpg" class="home-main">
+        </div>
+        <ul class="thumb">
+          <li><img src="logo_outline2.png" onclick="imgSlider('home_page/dog-carer.jpg'); changeCircleColor('#74b898')">
+          </li>
+          <li><img src="logo_outline2.png" onclick="imgSlider('home_page/dog-side.jpg'); changeCircleColor('#c0daed')">
+          </li>
+          <li><img src="logo_outline2.png" onclick="imgSlider('home_page/dog-lay.jpg'); changeCircleColor('#a2ebe8')">
+          </li>
+        </ul>
+        <ul class="sci">
+          <li><a href="https://www.facebook.com/sydneyuni/"><img src="home_page/facebook.png"></a></li>
+          <li><a href="https://twitter.com/Sydney_Uni"><img src="home_page/twitter.png"></a></li>
+          <li><a href="https://www.instagram.com/sydney_uni/"><img src="home_page/instagram.png"></a></li>
+        </ul>
+        <script type="text/javascript">
+          function imgSlider(anything) {
+            document.querySelector('.home-main').src = anything;
+          }
+
+          function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+          }
+
+          function autoScrollThroughButtons() {
+            const thumbItems = document.querySelectorAll('.thumb li');
+            const interval = 8000;
+            const delay = 2000;
+
+            let currentIndex = 0;
+            setInterval(() => {
+              thumbItems[currentIndex].querySelector('img').click();
+              currentIndex = (currentIndex + 1) % thumbItems.length;
+            }, interval);
+          }
+          autoScrollThroughButtons();
+        </script>
+      </div>
+    </article>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- video display -->
+    <article class="video-container">
+      <div class="circle-content"></div>
+      <div class="video-container">
+        <video style="display: block; margin: auto;" width="1000" height="563" controls>
+        <source src="ISYS2110 Video.mp4" type="video/mp4">
+</video>
+        <!-- <iframe class="video" src="https://youtu.be/XLD4-0up_rk"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe> -->
+      </div>
+
+      <div class="home-textbox">
+        <h2>A sanctuary of companionship and well-being</h2>
+
+        <div class="home-section">
+          <p>
+            Caring for a dog involves various aspects, including proper nutrition, regular exercise, grooming,
+            veterinary care, and social interaction. At Dogs Haven, we prioritize all these essential needs to promote
+            the overall well-being of your furry friend. We create an environment where dogs can thrive, forming strong
+            bonds with their caretakers and fellow canines.
+            <br>
+            <br>
+
+            Our team of experienced professionals is passionate about dogs and is devoted to providing personalized care
+            for each and every dog in our care. Whether it's through interactive playtime, stimulating activities, or
+            cozy resting spaces, we strive to make Dogs Haven a second home for your pets.
+            <br>
+            <br>
+
+            We understand the loyalty, affection, and unwavering devotion that dogs bring to our lives. That's why we
+            are committed to ensuring their happiness and providing them with a loving and nurturing environment. When
+            you entrust your dog to Dogs Haven, you can have peace of mind knowing that they are in capable and caring
+            hands.
+            <br>
+            <br>
+
+            Join us at Dogs Haven and give your furry friend the best possible care and attention they deserve.
+            Together, we can create a sanctuary where dogs can thrive, feel loved, and experience a true home away from
+            home.
+            <br>
+            <br>
+          </p>
+        </div>
+      </div>
+
+    </article>
+
+
+
+    <!-- Chat bot -->
+    <!-- button display -->
+    <button class="open-button material-icons chatBotButton" onclick="openForm()" style="font-size: 40px">forum
+    </button>
+
+    <!-- The form -->
+    <div class="form-popup" id="myForm">
+      <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+      <h2 class="chatbot-heading">Ask ChatBot</h2>
+      <p id="chatbotText">What would you like to know?</p>
+
+      <form action="/index.html" class="form-container">
+        <input type="text" placeholder="Ask a Question" name="question" required>
+      </form>
+    </div>
+
+
+
+    <!-- footer  -->
+    <footer class="footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <ul style="background-color: #74b898;">
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Carers.html">Our Team</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="Contact-Us.html">Contact Us</a></li>
+            <li><a href="Booking.html">Booking</a></li>
+            <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+            <li><a href="Sitemap.html">Sitemap</a></li>
+          </ul>
+        </nav>
+        <p style="text-align: left;">&copy; 2023 Dogs Haven. All rights reserved.</p>
+      </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+</head>
+
+<body>
+  <!-- importing the Java Script file -->
+  <script src="script.js"></script>
+
+  <!--   creating the Nav bar  -->
+  <ul>
+    <li><a class="logo" href="index.html"><img class="logo" src="logo_outline2.png" alt="Logo"
+          style=height:54.4px;width:54.4px align=middle></a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Carers.html">Our Team</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a class="active" href="AboutUs.html">About Us</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+    <li><a href="Contact-Us.html">Contact Us</a></li>
+    <li><a href="Login.html">Login/Register</a></li>
+    <li style="float:right"><a class="BookNow" href="Login.html"><strong>Book Now!</strong></a></li>
+  </ul>
+
+  <!-- Chat bot -->
+  <!-- button display -->
+  <!-- https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+  <button class="open-button material-icons chatBotButton" onclick="openForm()" style="font-size: 40px">forum </button>
+
+  <!-- The form -->
+  <div class="form-popup" id="myForm">
+    <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+    <h2 class="chatbot-heading">Ask ChatBot</h2>
+    <p id="chatbotText">What would you like to know?</p>
+
+    <form action="/AboutUs.html" class="form-container">
+      <input type="text" placeholder="Ask a Question" name="question" required>
+    </form>
+  </div>
+
+
+
+  <div class="unbordered-content">
+    <div class="title">
+      <img style="width: 400px;" class="aboutus" src="aboutus.png">
+    </div>
+
+
+    <article class="head-container">
+      <!--image slider start-->
+      <div class="slider">
+        <div class="slides">
+          <!--radio button start-->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!--radio button end-->
+          <!--slide image start-->
+          <div class="slide first">
+            <img src="about_us/dog-logo.jpg" alt="">
+          </div>
+
+          <div class="slide second">
+            <img src="about_us/dog-care.jpg" alt="">
+          </div>
+
+          <div class="slide third">
+            <img src="about_us/dog-shop.jpg" alt="">
+          </div>
+
+          <div class="slide fourth">
+            <img src="about_us/dog-walk.jpg" alt="">
+          </div>
+          <!--slide image end-->
+
+          <!--auto navigation start-->
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+          <!--auto navigation end-->
+        </div>
+        <!--manual nagivation start-->
+        <div class="nagivation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual nagivation end-->
+
+      </div>
+      <!--image slider end-->
+      <script type="text/javascript">
+        var counter = 1;
+        setInterval(function () {
+          document.getElementById('radio' + counter).checked = true;
+          counter++;
+          if (counter > 4) {
+            counter = 1;
+          }
+        }, 5000);
+      </script>
+
+      <div class="para">
+        <style>
+          h1 {
+            font-size: 40px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+          }
+
+          h3 {
+            font-size: 25px;
+            color: #249c80;
+            padding-bottom: 20px;
+            padding-top: 20px;
+          }
+
+          h4 {
+            font-size: 25px;
+            color: #249c80;
+            padding-bottom: 10px;
+            padding-top: 10px;
+          }
+
+          p {
+            font-size: 20px;
+            line-height: 1.5;
+          }
+        </style>
+        <h1>Our Vision</h1>
+        <h3>Providing Exceptional Care and Love for Your Furry Friends: Discover Our Dog Care Haven!</h3>
+        <div class="bordered">
+          <p> Welcome to Dogs Haven, the ultimate dog care service designed to provide a haven of love and care for your
+            furry companions. At Dogs Haven, we understand that your dogs are not just pets; they are cherished members
+            of
+            your family. That's why we offer a range of personalized services to ensure their happiness, well-being, and
+            overall quality of life.
+          </p>
+        </div>
+      </div>
+
+    </article>
+
+    <article class="sub-container">
+      <div class="sub-heading">
+        <section class="about">
+          <div class="about-image">
+            <img src=about_us/dog-team.jpg>
+          </div>
+          <div class="about-content">
+            <h4>Who are we?</h4>
+            <div class="bordered">
+              <p>We, the team behind Dog Haven, are a dedicated group of dog lovers, enthusiasts, and experts who are
+                passionate about improving the lives of dogs and promoting responsible dog ownership. Our collective
+                experience spans various areas of expertise, including dog training, nutrition, health, behavior, and
+                overall well-being.<br><br>
+
+                We have come together with a shared vision to create Dog Haven as a comprehensive online resource and
+                community for dog owners and enthusiasts. Our mission is to provide valuable information, practical
+                advice, and a supportive platform where individuals can connect, learn, and celebrate their love for
+                dogs.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <div class="l-r-padding">
+      <h3>A Home Away from Home</h3>
+      <div class="bordered">
+        <p> At Dogs Haven, we understand that leaving your beloved dog behind can be a difficult decision. That's why
+          we've created an environment that mimics a cozy home setting. Our facility is equipped with spacious,
+          climate-controlled accommodations designed to provide comfort and privacy. Each dog has their own individual
+          space, complete with a comfortable bed, toys, and plenty of room to move around. <br><br><br> Our dedicated
+          team of
+          experienced and compassionate staff members is committed to providing the highest level of care for your furry
+          companions. We believe in personalized attention and ensure that each dog receives individualized care based
+          on their unique needs. From feeding and grooming to exercise and playtime, our staff members are trained to
+          provide expert care and attention to keep your dog healthy and happy. Dogs Haven believes in keeping dogs
+          mentally and physically stimulated. We offer a variety of enriching activities designed to engage your dog's
+          senses and promote their overall well-being. Whether it's interactive playtime with our dedicated staff, group
+          socialization sessions, or stimulating puzzle toys, we strive to keep our furry guests entertained and
+          fulfilled during their stay.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ourdetails">
+    <h3>Tara Forman - tfor8084</h3>
+    <p>Role: Responsible for User Profile, Contact Us, Privacy Policy and Site Map pages as well as the navigation bar
+      and ChatBot. Created the site map and helped design the wireframes. received and gave feedback to the group on
+      website design. Contributed to writing the report. Spoke about the design and special features in the video. Gave
+      feedback for the use case diagram and sourced answers for questions about the assignment from the tutor.
+      Participated in group meetings. </p>
+    <br>
+    <h3>Kimberlie Fu - kifu5223</h3>
+    <p>Role: Responsible for Home, About Us, and Payment. Helping with website consistency desgin all throughout by
+      fixing or editing some area that requires improvement. Designed the designated website pages according to website
+      specification and user feedback. Contributed to report and presentation (system address business needs). Assist in
+      arranging
+      group meetings. </p>
+    <br>
+    <h3>Vivian Ha - weha7612</h3>
+    <p>Role: Responsible for Gallery and FAQ. Ensured gallery scalability with responsive images and readability with
+      pop-up images. Added footer throughout pages. Participated in group meetings to discuss changes. Contributed to
+      report. Summarized executive summary. Created use case descriptions in accordance with the updated use case
+      diagram. Contributed to presentation
+      (business needs). </p>
+    <br>
+    <h3>Oydan Khan - okha5621</h3>
+    <p>Role: Responsible for Login, Register and Booking page. Created the png files for the titles of each page, as well as
+      the background image. Helped with the colour scheme. Contributed to the wireframe diagrams, writing the report,
+      and survery questions. Helped in gathering survey takers and editing the video. </p>
+    <br>
+    <h3>Katholiki Kritharides - kkri6877</h3>
+    <p>Role: Responsible for Services and Our Team pages. Created the website logo and picked colour scheme with help
+      from the group. Added this group member information to About Us page. Added borders and white background to all
+      pages so that
+      it was readable on a patterned background, tried to improve whitespacing. Organised, facilitated and contributed
+      to group meetings and discussions, hosting zoom meetings.
+      Received feedback from and gave feedback to other group members on website pages and design, implemented feedback
+      received. Contributed to report writing and presentation, spoke about user profile in final video. Created use
+      case diagram with group feedback
+      implemented, and amended given tutor and group feedback. </p>
+  </div>
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="footer-container">
+      <nav class="footer-nav">
+        <ul style="background-color: #74b898;">
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Carers.html">Our Team</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact-Us.html">Contact Us</a></li>
+          <li><a href="Booking.html">Booking</a></li>
+          <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+          <li><a href="Sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p style="text-align: left;">&copy; 2023 Dogs Haven. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

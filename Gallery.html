@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+</head>
+
+<body>
+  <!-- importing the Java Script file -->
+  <script src="script.js"></script>
+
+  <!--  navigation bar  -->
+  <ul>
+    <li><a class="logo" href="index.html"><img class="logo" src="logo_outline2.png" alt="Logo"
+          style=height:54.4px;width:54.4px align=middle></a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Carers.html">Our Team</a></li>
+    <li><a class="active" href="Gallery.html">Gallery</a></li>
+    <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+    <li><a href="Contact-Us.html">Contact Us</a></li>
+    <li><a href="Login.html">Login/Register</a></li>
+    <li style="float:right"><a class="BookNow" href="Login.html"><strong>Book Now!</strong></a></li>
+  </ul>
+
+      <div class="title">
+    <img style="width: 400px;" class="gallerytitle" src="gallery.png">
+  </div>
+  
+  <!-- Page  -->
+  <input type="radio" name="filter" id="filter1" checked>
+  <input type="radio" name="filter" id="filter2">
+  <input type="radio" name="filter" id="filter3">
+  <input type="radio" name="filter" id="filter4">
+
+  <div class=gallery-container>
+    <div class=section-content>
+      <p>
+        Our Gallery showcases the adorable pups that have stayed with us at our dog sitting service.
+        Browse through our photos to see the joy and happiness we bring to every dog that stays with us.
+        Contact us to learn more about our services and to book a stay for your furry friend!
+      </p>
+    </div>
+
+    <div class=filters>
+      <style>
+        h3 {
+          color: white;
+          background-color: #b0cfc0;
+          height: 100%;
+          line-height: 45px;
+          padding: 0 40px;
+        }
+      </style>
+      <h3>Categories</h3>
+      <label for="filter1">All</label>
+      <label for="filter2">Dogs With Us</label>
+      <label for="filter3">Services</label>
+      <label for="filter4">Events</label>
+    </div>
+
+    <div class=gallery>
+      <div class="pic dogs">
+        <img src="gallery/dogs1.jpg" alt="dogs1">
+      </div>
+      <div class="pic event">
+        <img src="gallery/event1.jpg" alt="event1">
+      </div>
+      <div class="pic service">
+        <img src="gallery/service1.jpg" alt="service1">
+      </div>
+      <div class="pic dogs">
+        <img src="gallery/dogs2.jpg" alt="dogs2">
+      </div>
+      <div class="pic service">
+        <img src="gallery/service2.jpg" alt="service2">
+      </div>
+      <div class="pic event">
+        <img src="gallery/event2.jpg" alt="event2">
+      </div>
+      <div class="pic dogs">
+        <img src="gallery/dogs3.jpg" alt="dogs3">
+      </div>
+      <div class="pic service">
+        <img src="gallery/service3.jpg" alt="service3">
+      </div>
+      <div class="pic event">
+        <img src="gallery/event3.jpg" alt="event3">
+      </div>
+      <div class="pic dogs">
+        <img src="gallery/dogs4.jpg" alt="dogs4">
+      </div>
+      <div class="pic service">
+        <img src="gallery/service4.jpg" alt="service4">
+      </div>
+      <div class="pic event">
+        <img src="gallery/event4.jpg" alt="event4">
+      </div>
+      <div class="pic dogs">
+        <img src="gallery/dogs5.jpg" alt="dogs5">
+      </div>
+      <div class="pic service">
+        <img src="gallery/service5.jpg" alt="service5">
+      </div>
+      <div class="pic service">
+        <img src="gallery/service6.jpg" alt="service6">
+      </div>
+      <div class="pic dogs">
+        <img src="gallery/dogs6.jpg" alt="dogs6">
+      </div>
+      <div class="pic event">
+        <img src="gallery/event5.jpg" alt="event5">
+      </div>
+    </div>
+
+    <div class="popup">
+      <span>&times;</span> <!-- x symbol -->
+      <img src="gallery/dogs1.jpg" alt="dogs1">
+    </div>
+  </div>
+
+  <!-- Pop-up script -->
+  <script>
+    document.querySelectorAll('.gallery img').forEach(image => {
+      image.onclick = () => {
+        document.querySelector('.popup').style.display = 'block';
+        document.querySelector('.popup img').src = image.getAttribute('src');
+      }
+    });
+
+    document.querySelector('.popup span').onclick = () => {
+      document.querySelector('.popup').style.display = 'none';
+    }
+  </script>
+
+  <!-- Chat bot -->
+  <!-- button display -->
+  <!-- https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+  <button class="open-button material-icons chatBotButton" onclick="openForm()" style="font-size: 40px">forum </button>
+
+  <!-- The form -->
+  <div class="form-popup" id="myForm">
+    <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+    <h2 class="chatbot-heading">Ask ChatBot</h2>
+    <p id="chatbotText">What would you like to know?</p>
+
+    <form action="/Gallery.html" class="form-container">
+      <input type="text" placeholder="Ask a Question" name="question" required>
+    </form>
+  </div>
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="footer-container">
+      <nav class="footer-nav">
+        <ul style="background-color: #74b898;">
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Carers.html">Our Team</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact-Us.html">Contact Us</a></li>
+          <li><a href="Booking.html">Booking</a></li>
+          <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+          <li><a href="Sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p style="text-align: left;">&copy; 2023 Dogs Haven. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

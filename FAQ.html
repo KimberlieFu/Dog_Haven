@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+</head>
+
+<body>
+  <!-- importing the Java Script file -->
+  <script src="script.js"></script>
+
+  <!--   creating the Nav bar  -->
+  <ul>
+    <li><a class="logo" href="index.html"><img class="logo" src="logo_outline2.png" alt="Logo"
+          style=height:54.4px;width:54.4px align=middle></a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Carers.html">Our Team</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="AboutUs.html">About Us</a></li>
+    <li><a class="active" href="FAQ.html">FAQ</a></li>
+    <li><a href="Contact-Us.html">Contact Us</a></li>
+    <li><a href="Login.html">Login/Register</a></li>
+    <li style="float:right"><a class="BookNow" href="Login.html"><strong>Book Now!</strong></a></li>
+  </ul>
+
+  <br>
+
+  <!-- webpage heading -->
+  <div class="title">
+    <img style="width: 1000px;" class="faq" src="faq.png">
+  </div>
+  <br>
+
+  <div class='dropdown'>
+
+    <div class='content'>
+      <h2>01</h2>
+      <h3>Can I trust Dogs Haven?</h3>
+      <p>At Dogs Haven, we understand the difficulty of entrusting your beloved pet's well-being to someone else. We
+        recognize that your pet is not just an animal but a cherished member of your family. This is why Dogs Haven
+        takes our service very seriously.</p>
+      <p>Before working at Dogs Haven, all our carers and trainers go through a rigorous vetting process. Every booking
+        is protected by Dogs Haven Privacy and Insurance Policy. In case of an emergency, you can rely on our FREE
+        insurance benefit to safeguard your pet. Additionally, our Customer Experience Team is available seven days a
+        week to assist you whenever needed if you have a query.</p>
+      <p>Furthermore, when you book with Dogs Haven, you can edit or cancel your booking or drop-by antime before the
+        stay. This gives you the opportunity to ensure that your pet is safe and content before you commit to us.</p>
+    </div>
+
+    <div class='content'>
+      <h2>02</h2>
+      <h3>Can I meet a carer or trainer before making a booking?</h3>
+      <p>We do not have an official booking to arrange Meet & Greet. However, if you’ve found a staff you wish to know
+        more to through Dogs Haven website, you can contact them directly. Or you can choose to use the chatbot to
+        contact us, and we will communicate to the staff on your behalf. We are online 24/7 on the chat so feel free to
+        reach out if you have any questions.</p>
+    </div>
+
+    <div class='content'>
+      <h2>03</h2>
+      <h3>How is your service charged? How much to pay per hour or overnight?</h3>
+      <p>Prices for different services can vary, and some services can charge per session or some can charge per day.
+        Additional services may also incur extra charges. You can refer to our Services page for list of services and
+        prices.</p>
+    </div>
+
+
+    <div class='content'>
+      <h2>04</h2>
+      <h3>What if my dogs have special needs? Do you charge extra?</h3>
+      <p>While making your booking, you can tell us what special needs your dog has. This can include food allergies,
+        medication, living environment etc. We do not incur additional charge for any special needs. However, if your
+        dog needs medication, please ensure each medication is clearly marked with your pet’s name and dosage level.</p>
+    </div>
+
+  </div>
+
+  <!-- Chat bot -->
+  <!-- button display -->
+  <!-- https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+  <button class="open-button material-icons chatBotButton" onclick="openForm()" style="font-size: 40px">forum </button>
+
+  <!-- The form -->
+  <div class="form-popup" id="myForm">
+    <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+    <h2 class="chatbot-heading">Ask ChatBot</h2>
+    <p id="chatbotText">What would you like to know?</p>
+
+    <form action="/FAQ.html" class="form-container">
+      <input type="text" placeholder="Ask a Question" name="question" required>
+    </form>
+  </div>
+
+</body>
+
+<!-- footer  -->
+<footer class="footer">
+  <div class="footer-container">
+    <nav class="footer-nav">
+      <ul style="background-color: #74b898;">
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Carers.html">Our Team</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+        <li><a href="Contact-Us.html">Contact Us</a></li>
+        <li><a href="Booking.html">Booking</a></li>
+        <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+        <li><a href="Sitemap.html">Sitemap</a></li>
+      </ul>
+    </nav>
+    <p style="text-align: left;">&copy; 2023 Dogs Haven. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+
+</html>

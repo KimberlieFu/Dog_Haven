@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet ">
+</head>
+
+<body>
+  <!-- importing the Java Script file -->
+  <script src="script.js"></script>
+
+  <!--   creating the Nav bar  -->
+  <ul>
+    <li><a class="logo" href="index.html"><img class="logo" src="logo_outline2.png" alt="Logo"
+          style=height:54.4px;width:54.4px align=middle></a></li>
+    <li><a href="Services.html">Services</a></li>
+    <li><a href="Carers.html">Our Team</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="AboutUs.html">About Us</a></li>
+    <li><a href="FAQ.html">FAQ</a></li>
+    <li><a class="active" href="Contact-Us.html">Contact Us</a></li>
+    <li><a href="Login.html">Login/Register</a></li>
+    <li style="float:right"><a class="BookNow" href="Login.html"><strong>Book Now!</strong></a></li>
+  </ul>
+
+  <!-- webpage heading -->
+  <br>
+  <div class="title">
+    <img style="width: 400px;" class="contactus" src="contactus.png">
+  </div>
+  <br>
+
+
+  <!-- 
+        <textarea style="font-size: 20px;" type="text" class="name field" rows="4" cols="40"
+            placeholder="your question"></textarea>
+ -->
+  <header>
+    <h3 class="subheading">Email: DogsHaven@gmail.com</h3>
+    <h3 class="subheading">Phone: +61 12345678</h3>
+    <h3 class="subheading">Location: 38 Parade Street Redfern 2016</h3>
+  </header>
+  <div class="container">
+
+    <!-- forms -->
+    <div align="center" class="form">
+      <!-- register -->
+      <div class="registration-form">
+        <label for="name field"> Full Name: </label>
+        <input style="font-size: 20px;" type="text" class="name field" placeholder="Full Name">
+        <label for="email field"> Email Address: </label>
+        <input style="font-size: 20px; width: 400px;" type="email" class="email field"
+          placeholder="namelastname@gmail.com">
+        <label for="message">What can we help you with?</label>
+        <textarea style="font-size: 15px;" id="message" rows="8" cols="50" placeholder="Your question"></textarea>
+        <button class="logbtn">Submit</button>
+      </div>
+    </div>
+    <!-- button switching -->
+  </div>
+  <p>&nbsp</p>
+  <p>&nbsp</p>
+  <p>&nbsp</p>
+  <p>&nbsp</p>
+
+
+  <!-- Chat bot -->
+  <!-- button display -->
+  <!-- https://www.w3schools.com/howto/howto_js_popup_form.asp -->
+  <button class="open-button material-icons chatBotButton" onclick="openForm()" style="font-size: 40px">forum </button>
+
+  <!-- The form -->
+  <div class="form-popup" id="myForm">
+    <button type="button" class="btn cancel" onclick="closeForm()">X</button>
+
+    <h2 class="chatbot-heading">Ask ChatBot</h2>
+    <p id="chatbotText">What would you like to know?</p>
+
+    <form action="/Contact-Us.html" class="form-container">
+      <input type="text" placeholder="Ask a Question" name="question" required>
+    </form>
+  </div>
+
+
+
+  <!-- footer  -->
+  <footer class="footer">
+    <div class="footer-container">
+      <nav class="footer-nav">
+        <ul style="background-color: #74b898;">
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="Carers.html">Our Team</a></li>
+          <li><a href="Gallery.html">Gallery</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="FAQ.html">FAQ</a></li>
+          <li><a href="Contact-Us.html">Contact Us</a></li>
+          <li><a href="Booking.html">Booking</a></li>
+          <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+          <li><a href="Sitemap.html">Sitemap</a></li>
+        </ul>
+      </nav>
+      <p style="text-align: left;">&copy; 2023 Dogs Haven. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
